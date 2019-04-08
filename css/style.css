@@ -4,21 +4,53 @@
  margin: 0;
 }
 /*...*/
+#titol {
+	border: 1px #0489B1 solid;
+	background-color: #0489B1;
+	text-align: center;
+	height:30px;
+}
+/*...*/
+#formulari {
+	border: 1px #0489B1 solid;
+	background-color: #0489B1;
+	padding: 5px;
+}
+/*...*/
+#wrapper {
+	background-color: #CEF6F5;
+	border: 1px #CEF6F5 solid;
+	width:65%;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*...*/
 #missatges p {
  background-color: #97CAEF;
  padding: 2px 8px;
+ border: 1px #CAFAFE solid;
+ margin: 5px;
+ color: #0489B1;
 }
+/*...*/
 #missatges p:nth-child(odd) {
  background-color: #CAFAFE;
+ border: 1px #97CAEF solid;
+ color: #0489B1;
 }
 /*...*/
 #errors p {
  background-color: #FC4445;
  padding: 2px 8px;
- color: #000;
 }
 /*...*/
-#errors {color:#FC4445;}
+#errors .errormsg {
+	width: 100%;
+	padding: 2px 8px;
+	background-color: #F78181;
+}
+/*...*/
+#errors {color:#610B0B;}
 /*...*/
 #newmsg p {
  background-color: #44F51D;

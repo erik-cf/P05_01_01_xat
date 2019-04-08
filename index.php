@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
  </head>
  <body>
+ <section id="wrapper">
  <section id="titol">
  <h1>xateja-ho!</h1>
  </section>
@@ -28,9 +29,32 @@ mysqli_close($connexio);
  </section>
  <section id="formulari">
  <form method="post" action="insertar.php">
- <p>Usuari: <input type="text" name="usuari" /></p>
-<p>Missatge: <input type="text" name="missatge" /></p>
-<p><input type="submit" value="Enviar missatge" /></p>
+ <table border=0>
+ <tr>
+ <td><p>Usuari: </p></td><td><p>
+ <?php if(isset($_GET['user'])){
+ 	print("<input type='text' name='usuari' value=".$_GET['user']." />");
+ }else{
+ 	print("<input type='text' name='usuari' />");
+ }
+ ?>
+ </p></td></tr>
+ <tr>
+ <td><p>Missatge: </p></td><td><p>
+ <?php
+ if(isset($_GET['msg'])){
+ 	print("<input type='text' name='missatge' value=".$_GET['msg']." />");
+ }else{
+ 	print("<input type='text' name='missatge' />");
+ }
+ ?>
+ </p></td>
+ </tr>
+ <tr>
+ <td colspan="2">
+<p><input type="submit" value="Enviar missatge" /></p></td>
+</tr>
+</table>
  </form>
  </section>
  <?php
@@ -38,22 +62,23 @@ mysqli_close($connexio);
  ?>
  <section id="newmsg">
  <p>Missatge inserit correctament</p>
+ </section>
  <?php
  	}
  ?>
- </section>
  <?php
  if(isset($_GET['error'])){ ?>
  <section id="errors">
- <p>ERRORS:</p>
+ <p>Llistat de errors:</p>
  <?php
  	if($_GET['error'] == 'nouservalue'){
- 		echo "ERROR: L'usuari no té valor!";
+ 		echo "<p class='errormsg'>ERROR: L'usuari no té valor!</p>";
  	}elseif($_GET['error'] == 'nomsgvalue'){
- 		echo "ERROR: El missatge no té valor!";
+ 		echo "<p class='errormsg'>ERROR: El missatge no té valor!</p>";
  	}
  ?>
  </section>
  <?php } ?>
+ </section>
  </body>
 </html>

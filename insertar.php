@@ -1,10 +1,16 @@
 <?php
 	include('connexioBD.php');
 	if(!isset($_POST['usuari']) || empty($_POST['usuari'])){
-		header("Location: index.php?error=nouservalue");
-		exit();
+		if(!empty($_POST['missatge'])){
+			header("Location: index.php?error=nouservalue&msg=".$_POST['missatge']);
+			exit();
+		}else{
+			header("Location: index.php?error=nouservalue");
+			exit();	
+		}
+		
 	}elseif(!isset($_POST['missatge']) || empty($_POST['missatge'])){
-		header("Location: index.php?error=nomsgvalue");
+		header("Location: index.php?error=nomsgvalue&user=".$_POST['usuari']);
 		exit();
 	}else{
 		$hora = localtime(time(), false);
