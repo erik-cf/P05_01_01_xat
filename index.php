@@ -70,13 +70,17 @@ mysqli_close($connexio);
  if(isset($_GET['error'])){ ?>
  <section id="errors">
  <p>Llistat de errors:</p>
+ <p class='errormsg'>
  <?php
  	if($_GET['error'] == 'nouservalue'){
- 		echo "<p class='errormsg'>ERROR: L'usuari no té valor!</p>";
+ 		echo "ERROR: L'usuari no té valor!";
  	}elseif($_GET['error'] == 'nomsgvalue'){
- 		echo "<p class='errormsg'>ERROR: El missatge no té valor!</p>";
+ 		echo "ERROR: El missatge no té valor!";
+ 	}elseif($_GET['error'] == 'noinsert'){
+ 		echo "ERROR: No s'ha pogut insertar les dades: ".$_GET['sqlerr'];
  	}
  ?>
+ </p>
  </section>
  <?php } ?>
  </section>
