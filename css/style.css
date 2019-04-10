@@ -1,11 +1,16 @@
+body{
+	background-color: #EFFBFB;	
+}
+/*...*/
 * {
- box-sizing: border-box;
- font-family: Verdana, Geneva, sans-serif;
- margin: 0;
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 0;
 }
 /*...*/
 #titol {
 	border: 1px #0489B1 solid;
+	border-radius: 5px 5px 0 0;
 	background-color: #0489B1;
 	color: #CAFAFE;
 	font-size: 18pt;
@@ -23,6 +28,7 @@
 /*...*/
 #wrapper {
 	background-color: #CEF6F5;
+	border-radius:10px;
 	border: 1px #CEF6F5 solid;
 	width:65%;
 	margin-left: auto;
@@ -30,34 +36,43 @@
 }
 /*...*/
 #missatges p {
- background-color: #97CAEF;
- padding: 2px 8px;
- border: 1px #CAFAFE solid;
- margin: 5px;
- color: #0489B1;
+	background-color: #97CAEF;
+	padding: 2px 8px;
+	border: 1px #CAFAFE solid;
+	border-radius: 10px;
+	margin: 5px;
+	color: #0489B1;
 }
 /*...*/
 #missatges p:nth-child(odd) {
- background-color: #CAFAFE;
- border: 1px #97CAEF solid;
- color: #0489B1;
+	background-color: #CAFAFE;
+	border: 1px #97CAEF solid;
+	color: #0489B1;
+}
+/*...*/
+#errors{
+	border-radius: 0 0 10px 10px;
+	background-color: #F78181;
+	padding-bottom: 5px;
+	color:#610B0B;
 }
 /*...*/
 #errors p {
- background-color: #FC4445;
- padding: 2px 8px;
+	background-color: #FC4445;
+	padding: 2px 8px;
 }
 /*...*/
 #errors .errormsg {
-	width: 100%;
+	margin: 5px;
 	padding: 2px 8px;
+	border: 1px #FC4445 solid;
+	border-radius: 15px;
 	background-color: #F78181;
 }
 /*...*/
-#errors {color:#610B0B;}
-/*...*/
 #newmsg p {
- background-color: #44F51D;
- padding: 2px 8px;
- color: #000;
+	background-color: #44F51D;
+	padding: 2px 8px;
+	color: #000;
+	border-radius: 0 0 10px 10px;
 }
