@@ -7,8 +7,12 @@
 #titol {
 	border: 1px #0489B1 solid;
 	background-color: #0489B1;
-	text-align: center;
-	height:30px;
+	color: #CAFAFE;
+	font-size: 18pt;
+	height:45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 /*...*/
 #formulari {
