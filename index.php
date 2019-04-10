@@ -62,7 +62,7 @@ mysqli_close($connexio);
  	if(isset($_GET['newmsg'])){
  ?>
  <section id="newmsg">
- <p>Missatge inserit correctament</p>
+ <p>Missatge inserit correctament. Si no es veu, actualitza la pàgina.</p>
  </section>
  <?php
  	}
